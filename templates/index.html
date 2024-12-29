@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortest Path Finder</title>
+</head>
+<body>
+    <h1>Find the Optimal Path</h1>
+    <form action="/result" method="post">
+        <label for="start_city">Start City:</label>
+        <select name="start_city" id="start_city">
+            {% for city in cities %}
+            <option value="{{ city }}">{{ city }}</option>
+            {% endfor %}
+        </select>
+        <label for="end_city">End City:</label>
+        <select name="end_city" id="end_city">
+            {% for city in cities %}
+            <option value="{{ city }}">{{ city }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Find Path</button>
+    </form>
+</body>
+</html>
+
